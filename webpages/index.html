@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <title>Dashboard</title>
+  <meta name="description" content="A simple web-app">
+  <meta name="author" content="Ivanin Ivanov">
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <!-- <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet"> -->
+
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="css/normalize.css">
+  <!-- <link rel="stylesheet" href="css/skeleton.css"> -->
+  <!-- <link rel="stylesheet" href="css/master.css"> -->
+  <!-- <link rel="stylesheet" href="css/flexboxgrid.css"> -->
+
+
+  <!-- Javascript
+  ---------------------------------------------------->
+  <script type="text/javascript" src="js/index.js"></script>
+
+  <!-- Facebook Javascript SDK init -->
+  <!-- <script type="text/javascript" src="js/FB.js"></script> -->
+  <!-- <script type="text/javascript" src="modules"></script> -->
+
+  </script>
+  <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="icon" type="image/png" href="images/favicon.png">
+
+
+  <!-- - NEW -->
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+  <!-- <script src="spec/fixtures.js"></script> -->
+  <script src="js/gridList.js"></script>
+  <script src="js/jquery.gridList.js"></script>
+  <script src="js/load.js"></script>
+</head>
+<body>
+
+<div id="fb-root"></div>
+
+  <!-- Primary Page Layout
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+
+    <div class="header">
+      <!-- <a href="#remove-row" class="button remove-row">-</a>
+      <a href="#add-row" class="button add-row">+</a> -->
+      <!-- <p>
+        <a class="github-button" href="https://github.com/hootsuite/grid" data-style="mega" data-count-href="/hootsuite/grid/stargazers" data-count-api="/repos/hootsuite/grid#stargazers_count" data-count-aria-label="# stargazers on GitHub" aria-label="Star hootsuite/grid on GitHub">GitHub</a>
+      </p> -->
+      <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+      </ul>
+    </div>
+    <div class="grid-container">
+      <ul id="myGrid" class="grid">
+        <li class="position-highlight">
+          <div class="inner"></div>
+        </li>
+
+        <li id = "time" data-w = "3" data-h = "1" data-x = "0" data-y = "0">
+          <div class="inner">
+            <h1 id="clock">21:44:30</h1>
+            <script type="text/javascript" src="js/time.js"></script>
+          </div>
+        </li>
+
+        <li id = "weather" data-w = "3" data-h = "3" data-x = "0" data-y = "1">
+          <div class="inner">
+            <table class = "weather">
+              <tbody>
+                <tr>
+                  <td colspan="2"><h1 id="temp"></h1></td>
+                  <td colspan="3"><h2 id="skyText"></h2></td>
+                </tr>
+                <tr>
+                  <td colspan="5"><h2 id="day">LOADING..</h2></td>
+                </tr>
+                <tr id="days">
+                  <td><strong>Day:</strong></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr id = "max">
+                  <td><strong>Max: </strong></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr id = "min">
+                  <td><strong>Min: </strong></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+                <tr id = "precip">
+                  <td><strong>Rain: </strong></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+
+              </tbody>
+            </table>
+          </div>
+        </li>
+
+        <li id = "social" data-w = "3" data-h = "2" data-x = "3" data-y = "0">
+          <div class="inner">
+            <p>social</p>
+          </div>
+        </li>
+
+        <li id = "agenda" data-w = "3" data-h = "2" data-x = "3" data-y = "2">
+          <div class="inner">
+            <section>
+              <h1>Agenda</h1>
+                <ul>
+                  <li>agenda lines and reminders go here</li>
+                  <li>agenda lines and reminders go here</li>
+                  <li>agenda lines and reminders go here</li>
+                  <li>agenda lines and reminders go here</li>
+                  <li>agenda lines and reminders go here</li>
+                  <li>agenda lines and reminders go here</li>
+                </ul>
+            </section>
+          </div>
+        </li>
+
+        <li id = "news" data-w = "3" data-h = "3" data-x = "6" data-y = "0">
+          <div class="inner">
+              <h3 id = "newsSource">LOADING..</h3>
+              <article id="a1">
+                <a class="newsLink" href="#"><p class="title"></p></a>
+                <p class="desc"> </p>
+              </article>
+              <article id="a2">
+                <a class="newsLink" href="#"><p class="title"></p></a>
+                <p class="desc"> </p>
+              </article>
+              <article id="a3">
+                <a class="newsLink" href="#"><p class="title"></p></a>
+                <p class="desc"> </p>
+              </article>
+              <article id="a4">
+                <a class="newsLink" href="#"><p class="title"></p></a>
+                <p class="desc"> </p>
+              </article>
+              <article id="a5">
+                <a class="newsLink" href="#"><p class="title"></p></a>
+                <p class="desc"> </p>
+              </article>
+
+          </div>
+        </li>
+
+        <li id = "eta" data-w = "3" data-h = "1" data-x = "6" data-y = "3">
+          <div class="inner">
+            <section>
+              <h2 id="leave">Loading..</h2>
+              <span id="duration">Loading..</span>
+              <span id="traffic">Loading..</span>
+
+            </section>
+          </div>
+        </li>
+
+      </ul>
+    </div>
+
+  </body>
+</html>

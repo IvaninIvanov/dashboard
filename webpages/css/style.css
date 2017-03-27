@@ -1,0 +1,175 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+body {
+  background-image: url(/images/bg.jpg);
+  color: white;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+span {
+  margin: auto 1em;
+  display: inline-table;
+}
+
+
+
+.grid-container {
+  position: absolute;
+  top: 5%;
+  left: 5%;
+  right: auto;
+  bottom: 0;
+  overflow: auto;
+  width: 95%;
+}
+.grid {
+  position: relative;
+  height: 95%;
+  list-style: none;
+  margin: 0;
+  /* Will be modified by the grid jquery lib, depending on the items */
+  -webkit-transition: width 0.2s,
+                      height 0.2s;
+          transition: width 0.2s,
+                      height 0.2s;
+}
+  .grid li {
+    position: absolute;
+    color: white;
+    opacity: 0.90;
+    z-index: 1;
+    font-weight: bold;
+    text-align: center;
+    vertical-align: middle;
+    -webkit-transition: top 0.2s,
+                        left 0.2s,
+                        width 0.2s,
+                        height 0.2s,
+                        font-size 0.2s,
+                        line-height 0.2s;
+            transition: top 0.2s,
+                        left 0.2s,
+                        width 0.2s,
+                        height 0.2s,
+                        font-size 0.2s,
+                        line-height 0.2s;
+  }
+  .grid li .inner {
+    position: absolute;
+    background:  rgba(60, 60, 60, 0.7);
+    color: white;
+    top: 0;
+    bottom: 10px;
+    left: 10px;
+    right: 0;
+    -webkit-transition: background 3s;
+            transition: background 3s;
+    overflow: hidden;
+    padding: 0.5em;
+  }
+
+
+  .grid li.changed .inner {
+    background: #ffff66;
+    -webkit-transition: none;
+            transition: none;
+  }
+  .grid li.ui-draggable-dragging {
+    -webkit-transition: none;
+            transition: none;
+  }
+  .grid li.position-highlight {
+    -webkit-transition: none;
+            transition: none;
+  }
+    .grid li.position-highlight .inner {
+      border: none;
+      background: #fff;
+    }
+
+
+.header {
+  display: block;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  right: auto;
+  bottom: 0px;
+  background-color: black;
+  height: 100%;
+  width: 5%;
+}
+
+#clock {
+  font-size: 5vw;
+  margin: auto;
+  padding: auto;
+  height: 100%;
+}
+
+#time {
+  vertical-align: middle;
+}
+
+#day {
+  margin-top: 0;
+  text-align: center;
+}
+
+#days {
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+}
+
+#agenda > ul li {
+  display: block;
+}
+
+table, tbody, tr, td {
+  padding-left: auto;
+  padding-right: auto;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: auto;
+  font-size: 1.3vw;
+}
+
+article {
+  font-size: 1.1vw;
+  margin-bottom: 0.7em;
+  text-align: left;
+}
+
+
+article > a, p  {
+  margin-bottom: 0;
+  margin-top: 0;
+  padding-bottom: auto;
+  padding-top: 0;
+  text-decoration: none;
+  color: inherit;
+}
+
+article > p {
+  font-weight: lighter;
+}
+
+article > a {
+  font-weight: bold;
+  color: white;
+}
+
+.weather {
+  height: 100%;
+  width: 100%;
+}
+
+h3, h2 {
+  margin: 0.5em 0;
+}

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <title>Dashboard</title>
+  <meta name="description" content="A simple web-app">
+  <meta name="author" content="Ivanin Ivanov">
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <!-- <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet"> -->
+
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="css/normalize.css">
+  <!-- <link rel="stylesheet" href="css/skeleton.css"> -->
+  <link rel="stylesheet" href="css/master.css">
+  <link rel="stylesheet" href="css/flexboxgrid.css">
+
+
+  <!-- Javascript
+  ---------------------------------------------------->
+  <script type="text/javascript" src="js/index.js"></script>
+
+  <!-- Facebook Javascript SDK init -->
+  <script type="text/javascript" src="js/FB.js"></script>
+  <!-- <script type="text/javascript" src="modules"></script> -->
+
+  </script>
+  <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="icon" type="image/png" href="images/favicon.png">
+
+</head>
+<body>
+
+<div id="fb-root"></div>
+
+  <!-- Primary Page Layout
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+
+  <main class="container-fluid">
+    <section class="row">
+
+      <section class="col-lg-3 wrap">
+        <h1 id="clock">21:44:30</h1>
+        <script type="text/javascript" src="js/time.js"></script>
+      </section>
+      <section class="col-lg-3 wrap">
+        <table id="weather">
+          <tbody>
+            <tr>
+              <td colspan="2"><h1 id="temp">17 C</h1></td>
+              <td colspan="3"><h2 id="skyText">Cloudy</h2></td>
+            </tr>
+            <tr>
+              <td colspan="5"><h2 id="day">Monday</h2></td>
+            </tr>
+            <tr id="days">
+              <td><strong>Day:</strong></td>
+              <td></td>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr id = "max">
+              <td><strong>Max: </strong></td>
+              <td>21c</td>
+              <td>21c</td>
+              <td>21c</td>
+              <td>21c</td>
+            </tr>
+            <tr id = "min">
+              <td><strong>Min: </strong></td>
+              <td>21c</td>
+              <td>21c</td>
+              <td>21c</td>
+              <td>21c</td>
+            </tr>
+            <tr id = "precip">
+              <td><strong>Rain: </strong></td>
+              <td>21c</td>
+              <td>21c</td>
+              <td>21c</td>
+              <td>21c</td>
+            </tr>
+
+          </tbody>
+        </table>
+      </section>
+
+      <section class="col-lg-3 wrap">
+        <div class="fb-login-button" data-max-rows="1" data-size="medium" data-show-faces="false" data-auto-logout-link="false"></div>
+        <h3>Social</h3>
+        <p>social placeholder</p>
+      </section>
+    </section>
+
+    <section class="row">
+
+      <section class="col-lg-3 col-md wrap">
+          <h1>Agenda</h1>
+            <ul>
+              <li>agenda lines and reminders go here</li>
+              <li>agenda lines and reminders go here</li>
+              <li>agenda lines and reminders go here</li>
+              <li>agenda lines and reminders go here</li>
+              <li>agenda lines and reminders go here</li>
+              <li>agenda lines and reminders go here</li>
+            </ul>
+      </section>
+
+      <section class="col-lg-3 wrap">
+        <div class="ETA">
+          <h2>Leave at: 14:32</h2>
+          <span>Time to work: 13mins</span>
+          <span>Traffic: Heavy</span>
+          <span>Accidents:</span>
+          <ul>
+            <li>Addison Avenue</li>
+          </ul>
+        </div>
+
+      </section>
+
+      <section class="col-lg-3 wrap">
+        <h3 id = "newsSource">News</h3>
+        <article id="a1">
+          <a class="newsLink" href="#"><p class="title">randomsda;ad;laksak;klds;lad;lkda;lk</p></a>
+          <p class="desc"> lkakldklaklkldaskl</p>
+        </article>
+        <article id="a2">
+          <a class="newsLink" href="#"><p class="title">randomsda;ad;laksak;klds;lad;lkda;lk</p></a>
+          <p class="desc"> lkakldklaklkldaskl</p>
+        </article>
+        <article id="a3">
+          <a class="newsLink" href="#"><p class="title">randomsda;ad;laksak;klds;lad;lkda;lk</p></a>
+          <p class="desc"> lkakldklaklkldaskl</p>
+        </article>
+        <article id="a4">
+          <a class="newsLink" href="#"><p class="title">randomsda;ad;laksak;klds;lad;lkda;lk</p></a>
+          <p class="desc"> lkakldklaklkldaskl</p>
+        </article>
+        <article id="a5">
+          <a class="newsLink" href="#"><p class="title">randomsda;ad;laksak;klds;lad;lkda;lk</p></a>
+          <p class="desc"> lkakldklaklkldaskl</p>
+        </article>
+      </section>
+    </section>
+  </main>
+
+<!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+</body>
+</html>

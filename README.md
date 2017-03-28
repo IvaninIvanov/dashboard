@@ -1,6 +1,6 @@
 ### Work in Progress
 
-# [-]Board
+# -Board
 
 ## Description
 This is a built from scratch web app that utilises external sources to provide readily available information in one place.
@@ -33,6 +33,7 @@ Self-explanatory. Does not need configuration. Based on system time.
 
 ### Weather widget
 Provides information about the current temperature and 4-da min/max and rain forecast (including [today])
+
 Can be configured at /setup.html or by pressing the Setup button on the main page.
 
 Configuration consists of:
@@ -43,7 +44,9 @@ Configuration consists of:
 
 ### Primary and secondary news feed
 Gets the top 10 news from a user defined source(s). 
+
 Splits them into 2 batches of 5 and automatically alternates between them. 
+
 Displays the headline and a small abstract; provides a link to the full article.
 
 Configuration consists of:
@@ -60,6 +63,7 @@ Configuration consists of:
 
 ### Notifications Widget
 Currently only supports Google Mail
+
 To do: 
 - [ ] Facebook
 - [ ] Twitter

@@ -27,7 +27,7 @@
 
   <!-- Javascript
   ---------------------------------------------------->
-  <script type="text/javascript" src="js/index.js"></script>
+  <!-- <script type="text/javascript" src="js/index.js"></script> -->
 
   <!-- Facebook Javascript SDK init -->
   <!-- <script type="text/javascript" src="js/FB.js"></script> -->
@@ -55,18 +55,19 @@
   <!-- Primary Page Layout
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
 
-    <div class="header">
+    <!-- <div class="header">
       <!-- <a href="#remove-row" class="button remove-row">-</a>
       <a href="#add-row" class="button add-row">+</a> -->
       <!-- <p>
         <a class="github-button" href="https://github.com/hootsuite/grid" data-style="mega" data-count-href="/hootsuite/grid/stargazers" data-count-api="/repos/hootsuite/grid#stargazers_count" data-count-aria-label="# stargazers on GitHub" aria-label="Star hootsuite/grid on GitHub">GitHub</a>
       </p> -->
-      <ul>
+      <!-- <ul>
         <li>1</li>
         <li>2</li>
         <li>3</li>
       </ul>
-    </div>
+    </div> -->
+    <input type="button" name="setup" value="Setup" onclick="location.href='/setup.html'">
     <div class="grid-container">
       <ul id="myGrid" class="grid">
         <li class="position-highlight">
@@ -86,38 +87,41 @@
               <tbody>
                 <tr>
                   <td colspan="2"><h1 id="temp"></h1></td>
-                  <td colspan="3"><h2 id="skyText"></h2></td>
+                  <td colspan="3"><h1 id="skyText"></h1></td>
                 </tr>
                 <tr>
-                  <td colspan="5"><h2 id="day">LOADING..</h2></td>
+                  <td colspan="5"><h2 id="loc"></h2></td>
+                </tr>
+                <tr>
+                  <td colspan="5"><h2 id="day">Requires Setup</h2></td>
                 </tr>
                 <tr id="days">
                   <td><strong>Day:</strong></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
+                  <td>load..</td>
+                  <td>load..</td>
+                  <td>load..</td>
+                  <td>load..</td>
                 </tr>
                 <tr id = "max">
                   <td><strong>Max: </strong></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
+                  <td>load..</td>
+                  <td>load..</td>
+                  <td>load..</td>
+                  <td>load..</td>
                 </tr>
                 <tr id = "min">
                   <td><strong>Min: </strong></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
+                  <td>load..</td>
+                  <td>load..</td>
+                  <td>load..</td>
+                  <td>load..</td>
                 </tr>
                 <tr id = "precip">
                   <td><strong>Rain: </strong></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
-                  <td></td>
+                  <td>load..</td>
+                  <td>load..</td>
+                  <td>load..</td>
+                  <td>load..</td>
                 </tr>
 
               </tbody>
@@ -125,48 +129,63 @@
           </div>
         </li>
 
-        <li id = "social" data-w = "3" data-h = "2" data-x = "3" data-y = "0">
+        <li id = "news1" data-w = "3" data-h = "3" data-x = "3" data-y = "0">
           <div class="inner">
-            <p>social</p>
+              <h3 id = "n1_newsSource">LOADING..</h3>
+              <article id="n1_a1">
+                <a class="newsLink" href="#"><p class="title"></p></a>
+                <p class="desc"> </p>
+              </article>
+              <article id="n1_a2">
+                <a class="newsLink" href="#"><p class="title"></p></a>
+                <p class="desc"> </p>
+              </article>
+              <article id="n1_a3">
+                <a class="newsLink" href="#"><p class="title"></p></a>
+                <p class="desc"> </p>
+              </article>
+              <article id="n1_a4">
+                <a class="newsLink" href="#"><p class="title"></p></a>
+                <p class="desc"> </p>
+              </article>
+              <article id="n1_a5">
+                <a class="newsLink" href="#"><p class="title"></p></a>
+                <p class="desc"> </p>
+              </article>
+
           </div>
         </li>
 
-        <li id = "agenda" data-w = "3" data-h = "2" data-x = "3" data-y = "2">
+        <li id = "mail" data-w = "3" data-h = "1" data-x = "3" data-y = "3">
           <div class="inner">
             <section>
-              <h1>Agenda</h1>
-                <ul>
-                  <li>agenda lines and reminders go here</li>
-                  <li>agenda lines and reminders go here</li>
-                  <li>agenda lines and reminders go here</li>
-                  <li>agenda lines and reminders go here</li>
-                  <li>agenda lines and reminders go here</li>
-                  <li>agenda lines and reminders go here</li>
-                </ul>
+              <h3>Google Mail: <span id="mailbox"></span></h3>
+              <!-- <input class='button' type="button" onclick="location.href='/auth';" value="Authenticate" /> -->
+
             </section>
           </div>
         </li>
 
-        <li id = "news" data-w = "3" data-h = "3" data-x = "6" data-y = "0">
+        <li id = "news2" data-w = "3" data-h = "3" data-x = "6" data-y = "0">
           <div class="inner">
-              <h3 id = "newsSource">LOADING..</h3>
+              <h3 id = "n2_newsSource">LOADING..</h3>
               <article id="a1">
                 <a class="newsLink" href="#"><p class="title"></p></a>
                 <p class="desc"> </p>
               </article>
-              <article id="a2">
+              <article id="n2_a2">
                 <a class="newsLink" href="#"><p class="title"></p></a>
                 <p class="desc"> </p>
               </article>
-              <article id="a3">
+              <article id="n2_a3">
                 <a class="newsLink" href="#"><p class="title"></p></a>
                 <p class="desc"> </p>
               </article>
-              <article id="a4">
+              <article id="n2_a4">
                 <a class="newsLink" href="#"><p class="title"></p></a>
                 <p class="desc"> </p>
               </article>
-              <article id="a5">
+              <article id="n2_a5">
                 <a class="newsLink" href="#"><p class="title"></p></a>
                 <p class="desc"> </p>
               </article>
@@ -177,9 +196,11 @@
         <li id = "eta" data-w = "3" data-h = "1" data-x = "6" data-y = "3">
           <div class="inner">
             <section>
-              <h2 id="leave">Loading..</h2>
+              <h3 id="leave">Loading..</h3>
               <span id="duration">Loading..</span>
               <span id="traffic">Loading..</span>
+              <p class="tiny"><span>From: </span> <span id="origin"></span></p>
+              <p class="tiny"><span>To: </span> <span id="destination"></span></p>
 
             </section>
           </div>
@@ -187,6 +208,7 @@
 
       </ul>
     </div>
+    <script type="text/javascript" src="js/index.js"></script>
 
   </body>
 </html>

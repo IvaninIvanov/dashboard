@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <meta charset="utf-8">
+    <title>Dashboard</title>
+    <meta name="description" content="A simple web-app">
+    <meta name="author" content="Ivanin Ivanov">
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <!-- <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet"> -->
+
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link rel="stylesheet" href="css/normalize.css">
+  <!-- <link rel="stylesheet" href="css/skeleton.css"> -->
+  <!-- <link rel="stylesheet" href="css/master.css"> -->
+  <!-- <link rel="stylesheet" href="css/flexboxgrid.css"> -->
+
+
+  <!-- Javascript
+  ---------------------------------------------------->
+    <!-- <script type="text/javascript" src="js/index.js"></script> -->
+
+  <!-- Facebook Javascript SDK init -->
+  <!-- <script type="text/javascript" src="js/FB.js"></script> -->
+  <!-- <script type="text/javascript" src="modules"></script> -->
+
+    </script>
+  <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link rel="icon" type="image/png" href="images/favicon.png">
+
+
+  <!-- - NEW -->
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
+  <!-- <script src="spec/fixtures.js"></script> -->
+    <script src="js/gridList.js"></script>
+    <script src="js/jquery.gridList.js"></script>
+    <script src="js/load.js"></script>
+  </head>
+  <body>
+    <input type="button" name="home" value="Home" onclick="location.href='/'">
+    <div class="setup">
+
+      <form class="weather" action="/api/weather" method="post">
+        <h3>Weather Widget</h3>
+        <label for="postcode">Please enter a valid UK city* or postcode: </label>
+        <br>
+        <input type="text-box" name="postcode" value="">
+        <br>
+        <label for="degrees">Degrees in: </label>
+        <select class="" name="degrees">
+          <option value="C">Celsius</option>
+          <option value="F">Fahrenheit</option>
+        </select>
+        <br>
+        <p>(* example: Portsmouth,UK)</p>
+        <button class = "button" type="submit" id="submitWeather">Submit</button>
+      </form>
+
+      <form class="eta" action="/api/eta" method="post">
+        <h3>Time-To-Work Widget</h3>
+        <label for="home">Home postcode: </label>
+        <input type="text-box" name="home" value="">
+        <br>
+        <label for="work">Work postcode: </label>
+        <input type="text-box" name="work" value="">
+        <br>
+        <label for="">Must arrive at (24-hour format): </label>
+        <input type="text-box" name="hour" value="14" style="width: 30px">
+        <span style="margin: 0">:</span>
+        <input type="text-box" name="minute" value="00" style="width: 30px">
+        <p>(locations, not connected by roads would return an error)</p>
+        <button class = "button" type="submit" id="submitETA">Submit</button>
+      </form>
+
+      <form class="news1" action="/api/news1" method="post">
+        
+      </form>
+    </div>
+
+
+    <script type="text/javascript" src="js/setup.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+
+
+  </body>
+</html>

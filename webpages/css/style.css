@@ -22,7 +22,7 @@ span {
 .grid-container {
   position: absolute;
   top: 5%;
-  left: 5%;
+  left: 2%;
   right: auto;
   bottom: 0;
   overflow: auto;
@@ -107,7 +107,7 @@ span {
 }
 
 #clock {
-  font-size: 5vw;
+  font-size: 5vmax;
   margin: auto;
   padding: auto;
   height: 100%;
@@ -131,17 +131,27 @@ span {
   display: block;
 }
 
-table, tbody, tr, td {
+#temp  {
+  font-size: 5vmax;
+  margin: 0;
+}
+
+
+table, tbody, tr, td, p, span{
   padding-left: auto;
   padding-right: auto;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: auto;
-  font-size: 1.3vw;
+  font-size: 2.3vmin;
+  /*font-size: 1em;*/
 }
 
+#skytext {
+  font-size: 5em;
+}
 article {
-  font-size: 1.1vw;
+  font-size: 2vmin;
   margin-bottom: 0.7em;
   text-align: left;
 }
@@ -172,4 +182,38 @@ article > a {
 
 h3, h2 {
   margin: 0.5em 0;
+}
+
+.button {
+  -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+
+    text-decoration: none;
+    color: initial;
+}
+
+select {
+  color: black;
+}
+
+.setup {
+  text-align:  center;
+  margin: 5% 0;
+}
+
+.setup > form {
+  margin-top: 5%;
+}
+
+.setup > form > * {
+  margin: 0.5%;
+}
+
+input {
+  color: black;
+}
+
+.tiny {
+  font-size: 1.8vmin;
 }

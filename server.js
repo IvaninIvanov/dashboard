@@ -47,8 +47,15 @@ var destination = null;
 var arriveM;
 var arriveH;
 
+// news
+var newsApi;
+var newsSrc1 = 'bbc-news';
+var newsSrc2 = 'bbc-sport';
 
-var newsKey = 'https://newsapi.org/v1/articles?source=bbc-news&sortBy=top&apiKey=1e7fd484a32e4f86bc4db5042c76b194';
+var newsKey = '1e7fd484a32e4f86bc4db5042c76b194';
+var newsFeed1 = 'https://newsapi.org/v1/articles?source='+newsSrc1+'&sortBy=top&apiKey='+newsKey;
+var newsFeed2 = 'https://newsapi.org/v1/articles?source='+newsSrc2+'&sortBy=top&apiKey='+newsKey;
+
 
 var googleKey = 'AIzaSyC5Y-uxgxcZggLssNse89lo7Pw6--0Bv-0'
 var sampleTraffic = "https://maps.googleapis.com/maps/api/distancematrix/json?origins=po40jd&destinations=po15lg&mode=drive&departure_time=1490385902&traffic_model=pessimistic&key=AIzaSyC5Y-uxgxcZggLssNse89lo7Pw6--0Bv-0"
@@ -98,7 +105,11 @@ app.get('/auth', authServer);
 app.get('/auth/success', getToken);
 app.get('/api/weather', getWeather);
 app.post('/api/weather', retrieveWeatherVars);
-app.get('/api/news', getNews);
+app.get('/api/news1', getNews1);
+app.post('/api/news1', postNews1);
+app.get('/api/news2', getNews2);
+app.post('/api/news2', postNews2);
+app.get('/api/newsSources', getNewsSources);
 app.get('/api/eta', getEta);
 app.post('/api/eta', retrieveEtaVars)
 app.get('/api/gmail', googleUnread);
@@ -224,14 +235,38 @@ function retrieveWeatherVars(req, res) {
 
 // *** NEWS *** //
 
-function getNews(req, res) {
-  reqNews(newsKey)
+function getNewsSources(req, res) {
+  reqNewsSources()
+    .then(
+      function(sources) {
+        res.send(sources)
+      }
+    )
+}
+
+
+function reqNewsSources(){
+  return new Promise (
+    function (resolve, reject){
+      requestify.get('https://newsapi.org/v1/sources?language=en')
+        .then(
+          function(response) {
+            resolve(response.body)
+          }
+        )
+    }
+  )
+}
+
+
+function getNews1(req, res) {
+  reqNews1(newsFeed1)
     .then(function(news) {
       res.send(news)
     })
 }
 
-function reqNews(url) {
+function reqNews1(url) {
   return new Promise(
     function (resolve, reject) {
       requestify.get(url).then(function(response) {
@@ -241,9 +276,45 @@ function reqNews(url) {
   )
 }
 
+function postNews1(req, res) {
+  newsSrc1 = req.body.src1;
+  newsFeed1 = 'https://newsapi.org/v1/articles?source='+newsSrc1+'&sortBy=top&apiKey='+newsKey;
+  console.log(newsSrc1);
+  console.log(newsFeed1);
+  res.redirect('/setup.html');
+}
+// INSERT NEWS #2
+
+function getNews2(req, res) {
+  reqNews2(newsFeed2)
+    .then(function(news) {
+      res.send(news)
+    })
+}
+
+function reqNews2(url) {
+  return new Promise(
+    function (resolve, reject) {
+      requestify.get(url).then(function(response) {
+        resolve(response.body);
+      });
+    }
+  )
+}
+
+function postNews2(req, res) {
+  newsSrc2 = req.body.src2;
+  newsFeed2 = 'https://newsapi.org/v1/articles?source='+newsSrc2+'&sortBy=top&apiKey='+newsKey;
+  console.log(newsSrc2);
+  console.log(newsFeed2);
+  res.redirect('/setup.html');
+}
+
+
 
 
 // *** ESTIMATED TIME OF ARRIVAL (ETA) *** //
+
 function getEta(req, res) {
   var depart = Date.now()
   var matrixQuery = {

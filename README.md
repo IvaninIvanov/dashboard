@@ -89,15 +89,7 @@ Configuration consists of:
 ## Reflection
 When initially designing the user interface a number of options have been considered.
 - The first consideration was a simple table-based design. This was quickly rejected because of over-simplicity, less flexibility, no customization options and because tables are 'the old way'.
-- Bootstrap was the second option as a foundation of the layout. It was a better choice than the table-based layout, however it lacked flexibility. The main idea behind the design was to have the widgets being able to be moved or at least occupy a different span of rows and the others arranged accordingly. For example:
-
-|  one  || two |
-
-|       ||_____|
-
-|_______||three|
-
-
+- Bootstrap was the second option as a foundation of the layout. It was a better choice than the table-based layout, however it lacked flexibility. The main idea behind the design was to have the widgets being able to be moved or at least occupy a different span of rows and the others arranged accordingly.
 - In order to make the design idea happen, grids have been considered the best choice. A number of different libraries have been researched and tested, but GridList by HootSuite was the easiest to work with and understand.
 
 Clock Widget

@@ -1,4 +1,4 @@
-### Work in Progress
+### Final Assessment Artifact for WebScript Programming 2017
 
 # -Board
 
